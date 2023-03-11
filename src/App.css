@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
+* {
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	color: #222;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img {
+	max-width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main {
+	padding: 10px;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 44px;
+	margin-top: 20px;
+	align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header a {
+	text-decoration: none;
+	color: inherit;
+}
+
+header a.logo {
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+header nav {
+	display: flex;
+	gap: 14px;
+}
+
+a {
+	cursor: pointer;
+}
+
+.post {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	margin-bottom: 30px;
+}
+
+@media screen and (min-width: 600px) {
+	.post {
+		grid-template-columns: 0.9fr 1.1fr;
+	}
+}
+
+.post .text h2 {
+	margin: 0;
+	font-size: 1.8rem;
+}
+
+.post .text a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.post .info {
+	margin: 6px 0;
+	color: #888;
+	font-size: 1rem;
+	font-weight: semibold;
+	display: flex;
+	gap: 10px;
+}
+
+.post .info .author {
+	color: #333;
+}
+
+.post .summary {
+	margin: 10px 0;
+	line-height: 1.4rem;
+}
+
+form.login,
+form.register {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+input {
+	display: flex;
+	margin-bottom: 5px;
+	width: 100%;
+	padding: 5px 7px;
+	border: 0;
+	background-color: #fff;
+	border-bottom: 2px solid #ddd;
+	border-radius: 5px;
+}
+
+button {
+	cursor: pointer;
+	width: 100%;
+	display: block;
+	background-color: #555;
+	border: 0;
+	color: #fff;
+	border-radius: 5px;
+	padding: 7px 0;
+	cursor: pointer;
+}
+
+.login h1,
+.register h1 {
+	text-align: center;
+}
+
+.post-page .image {
+	max-height: 400px;
+	overflow: hidden;
+}
+
+.post-page .image img {
+	object-fit: cover;
+	object-position: center center;
+	width: 100%;
+}
+
+.post-page a {
+	color: #333;
+	text-decoration: underline;
+}
+
+.post-page h1:first-child {
+	text-align: center;
+	font-size: 2.44rem;
+	margin: 10px 0 10px;
+}
+
+.post-page time {
+	text-align: center;
+	display: block;
+	font-style: 0.4rem;
+	color: #aaa;
+}
+
+.post-page .author {
+	font-style: 0.7rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.post-page .content p {
+	line-height: 1.6rem;
+}
+
+.edit-row {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.edit-btn {
+	background-color: #4f4f4f;
+	color: white !important;
+	padding: 15px 20px;
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	border-radius: 5px;
+	text-decoration: none !important;
+}
+
+.edit-btn:hover {
+	background-color: #6d6d6d;
+}
+
+a svg {
+	height: 20px;
 }
